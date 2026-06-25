@@ -13,7 +13,7 @@ const connectDB = async () =>{
 
   try{
 
-  await mongoose.connect('mongodb://127.0.0.1:27017/studentDB');
+  await mongoose.connect('MONGOOSE_URL');
 
   console.log('MongoDB connected successfully');
   }
@@ -175,7 +175,7 @@ app.post('/login', async (req, res) =>{
     name: studentExist.name
   },
 
-  'mysecretkey',
+  'KEY_MYKEY',
   {
     expiresIn: '1h'
   }
